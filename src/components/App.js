@@ -8,12 +8,14 @@ import Home from './Home'
 import Players from './Players'
 import Teams from './Teams'
 import Navbar from './Navbar'
+import TeamPage from './TeamPage'
 
 export default function App () {
   return (
     <Router>
       <div>
         <Navbar />
+
         <Switch>
           <Route path='/' exact>
             <Home />
@@ -23,6 +25,9 @@ export default function App () {
           </Route>
           <Route path='/teams'>
             <Teams />
+          </Route>
+          <Route path='/:teamId' exact>
+            <TeamPage />
           </Route>
           <Route path='*'>
             <h1 className='text-center'>Four oh Four</h1>

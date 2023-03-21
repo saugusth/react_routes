@@ -60,7 +60,6 @@ export default function Teams () {
 
       <Switch>
         <Route path={`${url}/:teamId`}>
-          <h1>hello</h1>
           <Team />
         </Route>
         <Route path='*'>
